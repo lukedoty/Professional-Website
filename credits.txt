@@ -1,5 +1,5 @@
 SPA architecture roughly adapted from Jeremy Likness
-//https://blog.jeremylikness.com/blog/build-a-spa-site-with-vanillajs/
+https://blog.jeremylikness.com/blog/build-a-spa-site-with-vanillajs/
 
 URL routing adapted from The Dev Drawer
 https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jh
