@@ -1,12 +1,14 @@
 import { loadPage } from "./page.js";
 
 export class PageContainer extends HTMLElement{
-    constructor(startPage) {
+    constructor() {
         super();
+
+        this.m_currentPage;
     }
 
     connectedCallback() {
-        var startPage = this.getAttribute("startPage");
+        const startPage = this.getAttribute("startPage");
         if (startPage) {
             this.goToPage(startPage);
         }
@@ -14,10 +16,17 @@ export class PageContainer extends HTMLElement{
 
     async goToPage(pageName) {
         const page = await loadPage(pageName);
+
+
         while (this.firstChild) {
-            this.removeChild(appContainer.firstChild);
+            this.removeChild(this.firstChild);
         }
         this.appendChild(page.html);
+        this.m_currentPage = page.title;
+    }
+
+    get currentPage() {
+        return this.m_currentPage;
     }
 }
 

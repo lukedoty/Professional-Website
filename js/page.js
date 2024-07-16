@@ -10,8 +10,6 @@ class Page {
         this.m_html = document.createElement("div");
         this.m_html.innerHTML = text;
         this.m_title = this.m_html.querySelectorAll("title")[0].innerText;
-
-        console.log("Page created");
     }
 
     get text() {
