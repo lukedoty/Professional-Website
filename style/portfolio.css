@@ -9,7 +9,7 @@
     background-color: darkgrey;
     position: relative;
     flex: 1 1 400px;
-    height: 300px;
+    aspect-ratio: 4 / 3;
     margin: 10px;
 
     border-radius: 0px;

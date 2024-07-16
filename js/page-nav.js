@@ -14,20 +14,22 @@ const pages = {
     "/portfolio": {
         pagePath: "../pages/portfolio.html",
         title: "Portfolio",
+    },
+    "/portfolio/project1": {
+        pagePath: "../pages/portfolio/project1.html",
+        title: "Project 1",
     }
 };
 
-// create document click that watches the nav links only
-document.addEventListener("click", (event) => {
-    const { target } = event;
-    if (!target.matches("nav a")) return;
+document.addEventListener("click", function(event) {
+    let navLink = event.target.closest("#nav-link");
+    if (!navLink) return;
     event.preventDefault();
-    route(event);
+    route(navLink);
 });
 
-function route(event) {
-    event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
+function route(navLink) {
+    window.history.pushState({}, "", navLink.href);
     pageHandler();
 };
 
