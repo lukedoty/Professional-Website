@@ -1,0 +1,20 @@
+:root {
+    --surface1: ;
+    --surface2: ;
+    --surface3: ;
+    --surface4: ;
+    --text1: ;
+    --text2: ;
+    --pop: ;
+
+}
+
+body {
+    max-width: 1536px;
+    width: 95%;
+    margin: auto;
+}
+
+header {
+    background-color: darkgrey;
+}
