@@ -2,9 +2,10 @@ import { PageContainer } from "./page-container.js";
 
 const pageContainer = document.getElementById("main-page-container");
 
+//URL routing adapted from:
 //https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jh
 
-const routes = {
+const pages = {
     404: {
         pagePath: "../pages/404.html",
         title: "404",
@@ -19,42 +20,29 @@ const routes = {
     }
 };
 
-// create document click that watches the nav links only
 document.addEventListener("click", (event) => {
     const { target } = event;
     if (!target.matches("nav a")) return;
     event.preventDefault();
-    route(event);
+    navigate(event);
 });
 
-function route(event) {
+async function navigate(event) {
     event.preventDefault();
-    // window.history.pushState(state, unused, target link);
     window.history.pushState({}, "", event.target.href);
-    locationHandler();
-};
-
-async function locationHandler() {
-    const location = window.location.pathname; // get the url path
-    // if the path length is 0, set it to primary page route
+    
+    const location = window.location.pathname;
     if (location.length == 0) {
         location = "/";
     }
-    // get the route object from the urlRoutes object
-    const route = routes[location] || routes["404"];
-    console.log(route.pagePath);
 
-    await pageContainer.goToPage(route.pagePath);
-
-    // set the title of the document to the title of the route
+    const page = pages[location] || pages["404"];
+    await pageContainer.goToPage(page.pagePath);
     document.title = "Luke Doty | " + route.title;
-}
+};
 
-// add an event listener to the window that watches for url changes
 window.onpopstate = locationHandler;
-// call the urlLocationHandler function to handle the initial url
-window.route = route;
-// call the urlLocationHandler function to handle the initial url
+window.route = navigate;
 locationHandler();
 
 
