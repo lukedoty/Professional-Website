@@ -40,7 +40,7 @@ async function pageHandler() {
         location = "/";
     }
 
-    const [page] = pages[location] || pages["404"];
+    const page = pages[location] || pages["404"];
     await pageContainer.goToPage(page.pagePath);
     document.title = "Luke Doty | " + page.title;
 }
