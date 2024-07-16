@@ -1,5 +1,5 @@
-export async function loadPage(pageName) {
-    const file = await fetch("../pages/" + pageName + ".html");
+export async function loadPage(pagePath) {
+    const file = await fetch(pagePath);
     const text = await file.text();
     return new Page(text);
 }
@@ -9,7 +9,6 @@ class Page {
         this.m_text = text;
         this.m_html = document.createElement("div");
         this.m_html.innerHTML = text;
-        this.m_title = this.m_html.querySelectorAll("title")[0].innerText;
     }
 
     get text() {
@@ -18,9 +17,5 @@ class Page {
 
     get html() {
         return this.m_html;
-    }
-
-    get title() {
-        return this.m_title;
     }
 }

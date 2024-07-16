@@ -7,22 +7,13 @@ export class PageContainer extends HTMLElement{
         this.m_currentPage;
     }
 
-    connectedCallback() {
-        const startPage = this.getAttribute("startPage");
-        if (startPage) {
-            this.goToPage(startPage);
-        }
-    }
-
-    async goToPage(pageName) {
-        const page = await loadPage(pageName);
-
+    async goToPage(pagePath) {
+        const page = await loadPage(pagePath);
 
         while (this.firstChild) {
             this.removeChild(this.firstChild);
         }
         this.appendChild(page.html);
-        this.m_currentPage = page.title;
     }
 
     get currentPage() {
