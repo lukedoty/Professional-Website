@@ -2,9 +2,6 @@ import { PageContainer } from "./page-container.js";
 
 const pageContainer = document.getElementById("main-page-container");
 
-//URL routing adapted from:
-//https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jh
-
 const pages = {
     404: {
         pagePath: "../pages/404.html",
