@@ -11,20 +11,40 @@
 
 body {
     background-color: white;
-    max-width: 1536px;
+    max-width: 1920px;
     width: 95%;
     margin: auto;
 }
 
 header {
-    background-color: darkgrey;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 
-nav > a {
+header > a {
+    margin: 0;
+
+    font-size: 45px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header > nav {
+    text-align: right;
+    margin: auto 0;
+}
+
+header > nav > a {
+    margin-left: 10px;
     text-decoration: none;
     color: black;
+    font-size: 20px;
 }
 
-nav > a:hover {
+header > nav > a:hover {
     color: lightgrey;
 }

@@ -3,7 +3,6 @@
     justify-content: center;
     flex-flow: row wrap;
     margin: -5px;
-    margin-top: 50px;
 }
 
 .portfolio-gallery > * {
