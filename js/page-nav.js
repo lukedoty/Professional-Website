@@ -1,25 +1,13 @@
 import { PageContainer } from "./page-container.js";
 
 const pageContainer = document.getElementById("main-page-container");
-
-const pages = {
-    404: {
-        pagePath: "../pages/404.html",
-        title: "404",
-    },
-    "/": {
-        pagePath: "../pages/home.html",
-        title: "Home",
-    },
-    "/portfolio": {
-        pagePath: "../pages/portfolio.html",
-        title: "Portfolio",
-    },
-    "/portfolio/project1": {
-        pagePath: "../pages/portfolio/project1.html",
-        title: "Project 1",
-    }
-};
+const pageDirectory = (async function() {
+    const pdFile = await fetch("../page-directory.json");
+    const pdJson = await pdFile.text();
+    const pdObject = JSON.parse(pdJson);
+    console.log(pdObject["404"]);
+    return pdObject;
+})();
 
 document.addEventListener("click", function(event) {
     let navLink = event.target.closest("#nav-link");
@@ -39,9 +27,12 @@ async function pageHandler() {
         location = "/";
     }
 
-    const page = pages[location] || pages["404"];
+    const resolvedPD = await pageDirectory;
+    const page = resolvedPD[location] || resolvedPD["404"];
     await pageContainer.goToPage(page.pagePath);
+
     document.title = "Luke Doty | " + page.title;
+    document.querySelector('meta[name="description"]').setAttribute("content", page.description);
 }
 
 window.onpopstate = pageHandler;
