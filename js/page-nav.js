@@ -39,8 +39,6 @@ async function pageHandler() {
         location = "/";
     }
 
-    console.log(location);
-    console.log(pages[location]);
     const page = pages[location] || pages["404"];
     await pageContainer.goToPage(page.pagePath);
     document.title = "Luke Doty | " + page.title;
