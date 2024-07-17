@@ -10,6 +10,7 @@
 }
 
 body {
+    background-color: white;
     max-width: 1536px;
     width: 95%;
     margin: auto;
@@ -17,4 +18,13 @@ body {
 
 header {
     background-color: darkgrey;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > a:hover {
+    color: lightgrey;
 }
