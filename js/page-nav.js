@@ -7,7 +7,7 @@ const pageDirectory = (async function() {
 })();
 
 document.addEventListener("click", function(event) {
-    let navLink = event.target.closest(".nav-link");
+    let navLink = event.target.closest("a.nav-link");
     if (!navLink) return;
     event.preventDefault();
     route(navLink);
