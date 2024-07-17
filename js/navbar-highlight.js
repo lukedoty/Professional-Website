@@ -1,16 +1,18 @@
-document.querySelector('header nav a.nav-link[href="' + window.location.pathname + '"]').classList.add("selected");
-const navLinks = document.querySelectorAll("header nav a.nav-link");
+const navLinks = Array.from(document.querySelectorAll("header nav a.nav-link"));
 
-document.addEventListener("click", function(event) {
-    let navLink = event.target.closest("a.nav-link");
-    if (!navLink) return;
+window.onload = updateNavbar(window.location.toString());
 
+window.navigation.addEventListener("navigate", (event) => {
+    updateNavbar(event.destination.url);
+});
+
+function updateNavbar(location) {
     for(nl of navLinks) {
         nl.classList.remove("selected");
     }
 
-    const route = Array.from(navLinks).find(e => e.href === navLink.href);
+    const route = navLinks.find(e => e.href === location);
     if (route) {
         route.classList.add("selected");
     }
-});
+}
