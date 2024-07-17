@@ -9,6 +9,10 @@
 
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     background-color: white;
     max-width: 1920px;

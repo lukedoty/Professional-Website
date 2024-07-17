@@ -1,11 +1,8 @@
-import { PageContainer } from "./page-container.js";
-
 const pageContainer = document.getElementById("main-page-container");
 const pageDirectory = (async function() {
     const pdFile = await fetch("/page-directory.json");
     const pdJson = await pdFile.text();
     const pdObject = JSON.parse(pdJson);
-    console.log(pdObject["404"]);
     return pdObject;
 })();
 
