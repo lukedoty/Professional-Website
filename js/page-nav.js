@@ -9,20 +9,21 @@ const pageDirectory = (async function() {
 document.addEventListener("click", function(event) {
     let navLink = event.target.closest("a.nav-link");
     if (!navLink) return;
+    
     event.preventDefault();
     route(navLink);
 });
 
 function route(navLink) {
+    if (navLink.href === window.location.toString()) return;
+
     window.history.pushState({}, "", navLink.href);
     pageHandler();
 };
 
 async function pageHandler() {
     const location = window.location.pathname;
-    if (location.length == 0) {
-        location = "/";
-    }
+    if (location.length == 0) location = "/";
 
     const resolvedPD = await pageDirectory;
     const page = resolvedPD[location] || resolvedPD["404"];
