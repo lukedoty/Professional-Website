@@ -1,11 +1,11 @@
-.portfolio-gallery {
+.gallery {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     margin: -5px;
 }
 
-.portfolio-gallery > * {
+.gallery > * {
     background-color: darkgrey;
     position: relative;
     flex: 1 1 400px;
@@ -17,11 +17,11 @@
     transition: .3s ease;
 }
 
-.portfolio-gallery > *:hover {
+.gallery > *:hover {
     border-radius: 10px;
 }
 
-.portfolio-gallery > div > img {
+.gallery > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;

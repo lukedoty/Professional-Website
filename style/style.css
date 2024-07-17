@@ -1,0 +1,15 @@
+@import url("/style/variables.css");
+@import url("/style/fonts.css");
+@import url("/style/header.css");
+@import url("/style/gallery.css");
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: white;
+    max-width: 1400px;
+    width: 95%;
+    margin: auto;
+}

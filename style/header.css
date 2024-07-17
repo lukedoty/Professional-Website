@@ -10,10 +10,7 @@ header {
 
 header > #website-title {
     margin: 0;
-
-    color: black;
-    font-size: 45px;
-    text-decoration: none;
+    
     font-weight: bold;
 }
 
@@ -25,24 +22,22 @@ header > nav {
 header > nav > a {
     margin-left: 5px;
     padding: 10px;
-    border: solid black;
+    border: solid #111111;
     border-radius: 8px;
     border-width: 2px;
     border-color: transparent;
 
-    text-decoration: none;
     font-size: 20px;
 
     background-color: transparent;
-    color: black;
     transition: 0.25s ease;
 }
 
 header > nav > a:hover {
-    border-color: black;
+    border-color: #111111;
 }
 
 header > nav > a.selected {
-    background-color: black;
+    background-color: #111111;
     color: white;
 }
