@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+header > #website-title {
+    margin: 0;
+
+    font-family: "Rubik";
+    color: black;
+    font-size: 45px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header > nav {
+    text-align: right;
+    margin: auto 0;
+}
+
+header > nav > a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+header > nav > a:hover {
+    color: lightgrey;
+}

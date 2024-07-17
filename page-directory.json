@@ -1,26 +1,31 @@
 {
     "404": {
-        "pagePath": "../pages/404.html",
+        "pagePath": "/pages/404.html",
         "title": "404",
         "description": "Page not found."
     },
     "/": {
-        "pagePath": "../pages/home.html",
+        "pagePath": "/pages/home.html",
         "title": "Home",
         "description": "Portfolio and personal website of aspiring graphics programmer and technical artist Luke Doty"
     },
     "/portfolio": {
-        "pagePath": "../pages/portfolio.html",
+        "pagePath": "/pages/portfolio.html",
         "title": "Portfolio",
         "description": "Portfolio of aspiring graphiscs designer and technical artist Luke Doty"
     },
+    "/resume": {
+        "pagePath": "/pages/resume.html",
+        "title": "Resume",
+        "description": "Resume of aspiring graphiscs designer and technical artist Luke Doty"
+    },
     "/contact": {
-        "pagePath": "../pages/contact.html",
+        "pagePath": "/pages/contact.html",
         "title": "Contact",
         "description": "Contact Luke Doty"
     },
     "/portfolio/project1": {
-        "pagePath": "../pages/portfolio/project1.html",
+        "pagePath": "/pages/portfolio/project1.html",
         "title": "Project 1",
         "description": "Unfinished project"
     }
