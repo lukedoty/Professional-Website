@@ -1,3 +1,4 @@
+# Credit / Learning Resources
 SPA architecture roughly adapted from Jeremy Likness
 https://blog.jeremylikness.com/blog/build-a-spa-site-with-vanillajs/
 
