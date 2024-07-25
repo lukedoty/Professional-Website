@@ -19,10 +19,10 @@
         "title": "Resume",
         "description": "Resume of aspiring graphiscs designer and technical artist Luke Doty"
     },
-    "/contact": {
-        "pagePath": "/pages/contact.html",
-        "title": "Contact",
-        "description": "Contact Luke Doty"
+    "/games": {
+        "pagePath": "/pages/games.html",
+        "title": "Games",
+        "description": "Games worked on or made by Luke Doty"
     },
     "/portfolio/project1": {
         "pagePath": "/pages/portfolio/project1.html",

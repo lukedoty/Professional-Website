@@ -1,6 +1,8 @@
 @import url("/style/variables.css");
 @import url("/style/fonts.css");
+@import url("/style/spacing.css");
 @import url("/style/header.css");
+@import url("/style/page.css");
 @import url("/style/gallery.css");
 
 html {
@@ -9,7 +11,8 @@ html {
 
 body {
     background-color: white;
+    color: #111111;
     max-width: 1400px;
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
 }

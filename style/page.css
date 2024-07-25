@@ -1,0 +1,40 @@
+.page {
+    max-width: 700px;
+    margin: auto;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title > h1 {
+    margin: 0;
+}
+
+.page-title > button {
+    background-color: transparent;
+    margin: auto 0;
+    height: fit-content;
+    padding: 6px 10px;
+    border: solid #111111;
+    border-radius: 8px;
+    border-width: 2px;
+
+    font-size: 1.2rem;
+
+    transition: 0.25s ease;
+}
+
+.page-title > button > * {
+    margin: 0;
+}
+
+.page-title > button:hover {
+    background-color: #111111;
+    color: white;
+}
+
+.page h5 {
+    color:#919191;
+}
