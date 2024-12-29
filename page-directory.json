@@ -24,9 +24,9 @@
         "title": "Games",
         "description": "Games worked on or made by Luke Doty"
     },
-    "/portfolio/project1": {
+    "/portfolio/twig": {
         "pagePath": "/pages/portfolio/project1.html",
-        "title": "Project 1",
-        "description": "Unfinished project"
+        "title": "Twig",
+        "description": "A custom game and rendering engine"
     }
 }
