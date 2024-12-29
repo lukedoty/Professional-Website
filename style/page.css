@@ -38,3 +38,22 @@
 .page h5 {
     color:#919191;
 }
+
+.page a {
+    padding-bottom: 2px;
+
+    border: 2px solid transparent;
+    border-bottom-color: #111111;
+    border-top-color: #111111;
+    border-radius: 0px;
+
+    transition: 0.25s ease;
+}
+
+.page a:hover {
+    padding: 4px;
+    padding-bottom: 6px;
+
+    border-color: #111111;
+    border-radius: 8px;
+}

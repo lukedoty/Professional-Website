@@ -22,7 +22,7 @@ header > nav {
 header > nav > a {
     margin-left: 5px;
     padding: 6px 10px;
-    border: solid #111111;
+    border: solid;
     border-radius: 8px;
     border-width: 2px;
     border-color: transparent;
