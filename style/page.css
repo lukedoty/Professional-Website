@@ -39,7 +39,7 @@
     color:#919191;
 }
 
-.page a {
+.page a.nav-link{
     padding-bottom: 2px;
 
     border: 2px solid transparent;
@@ -50,7 +50,8 @@
     transition: 0.25s ease;
 }
 
-.page a:hover {
+.page a.nav-link:hover {
+    margin: 2px;
     padding: 4px;
     padding-bottom: 6px;
 
