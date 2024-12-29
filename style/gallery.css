@@ -28,7 +28,7 @@
     object-position: center center;
 }
 
-.overlay {
+.gallery .overlay {
     background-color: rgba(255, 255, 255, 0.75);
     opacity: 0;
     transition: .3s ease;
@@ -43,17 +43,29 @@
     justify-content: center;
     align-items: center;
     flex-flow: column ;
-
-    color: #111111;
-    font-size: 30px;
-    text-decoration: none;
 }
 
-.overlay:hover {
+.gallery .overlay:hover {
     opacity: 1;
 }
 
-.overlay > * {
+.gallery .overlay > * {
     margin: 0;
     padding: 0;
+}
+
+.gallery .overlay small {
+    color: #111111;
+    opacity: 0.6;
+
+    transition: .3s ease;
+
+    position: absolute;
+    bottom: 30px;
+    padding: 2px;
+}
+
+.gallery .overlay small:hover {
+    color: #111111;
+    opacity: 1;
 }
